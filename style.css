@@ -1,0 +1,130 @@
+body{
+    text-align: center;
+    font-family:'Roboto', sans-serif; 
+}
+
+
+.carta{
+    width: 325px;
+    height: 500px;
+    display: inline-block;
+    border-radius: 15px;
+    position: relative;
+    top: 50px;
+}
+
+.carta img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+}
+
+.carta::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    border-radius: 15px;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ;
+  }
+  
+.carta:hover::after {
+    opacity: 0.4;
+  }
+
+.salva button{
+    position: absolute;
+    width: 20%;
+    background-color: red;
+    color: white;
+    z-index: 2;
+    padding: 1em;
+    border-radius: 20px;
+    border:none;
+    opacity: 0;
+    transform: translate(120%, -100%);
+    transition: transform 0.4s linear;
+}
+
+.carta:hover .salva button{
+    opacity: 1;
+    transform: translate(120%, 45%)
+}
+
+
+
+.wealthy button{
+    position: absolute;
+    width: 170px;
+    height: 40px;
+    background-color: whitesmoke;
+    color: black;
+    z-index: 2;
+    padding: 0.4em;
+    border-radius: 20px;
+    border:none;
+    transform: translate(-90%, 1244%);
+    opacity: 0;
+    font-weight: bold;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: transform 0.4s linear;
+}
+
+.inserisci button{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: whitesmoke;
+    color: black;
+    z-index: 2;
+    padding: 0.4em;
+    border-radius: 20px;
+    border:none;
+    transform: translate(250%, 1244%);
+    opacity: 0;
+    font-weight: bold;
+    transition: transform 0.4s linear;
+}
+
+.upload button{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: whitesmoke;
+    color: black;
+    z-index: 2;
+    padding: 0.4em;
+    border-radius: 20px;
+    border:none;
+    transform: translate(100%, 1244%);
+    opacity: 0;
+    font-weight: bold;
+    transition: transform 0.4s linear;
+}
+
+.carta:hover .wealthy button{
+    opacity: 1;
+    transform: translate(-90%, 1100%)
+}
+
+.carta:hover .inserisci button{
+    opacity: 1;
+    transform: translate(250%, 1100%)
+}
+
+.carta:hover .upload button{
+    opacity: 1;
+    transform: translate(100%, 1100%)
+}
+
